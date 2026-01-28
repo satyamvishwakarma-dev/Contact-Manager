@@ -44,10 +44,34 @@ def run_dashboard():
             st.session_state.logged_in = False
             st.rerun()
 
-        # adds 15 empty lines to push the footer to the bottom
-        st.container(height=220,border=False)
-        # footer
-        st.caption("Made with ❤️ by Satyam Vishwakarma", text_alignment="center")
+
+        # Adding the developer info
+        st.markdown(
+            """
+            <style>
+                /* This removes the extra padding at the bottom of the sidebar */
+                div[data-testid="stSidebarUserContent"] {
+                    padding-bottom: 10px !important;
+                }
+            </style>
+            """,
+            unsafe_allow_html=True
+        )
+
+        # Spacer to push it down
+        st.markdown("<div style='height: 32vh;'></div>", unsafe_allow_html=True)
+        
+        # Footer Text Only
+        st.markdown(
+            """
+            <div style="text-align: center; margin-top: 20px;">
+                <p style="font-size: 0.8em; color: white; margin: 0;">Made with ❤️ by</p>
+                <h3 style="margin: 0 0 0 0; color: white;">Satyam Vishwakarma</h3>
+            </div>
+            """, 
+            unsafe_allow_html=True
+        )
+
         
     # Run the selected page
     pg.run()
