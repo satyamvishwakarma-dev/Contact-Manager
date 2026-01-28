@@ -39,13 +39,16 @@ def run_dashboard():
     # Optional: Add a logout button in the sidebar
     with st.sidebar:
         st.write(f"User: {st.session_state.username}")
+
         if st.button("Log Out"):
             st.session_state.logged_in = False
             st.rerun()
 
+        st.write("Made with ❤️ by Satyam Vishwakarma")
+        
     # Run the selected page
     pg.run()
-
+ 
 # Traffic Control
 if st.session_state.logged_in:
     run_dashboard()
