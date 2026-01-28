@@ -44,7 +44,10 @@ def run_dashboard():
             st.session_state.logged_in = False
             st.rerun()
 
-        st.write("Made with ❤️ by Satyam Vishwakarma")
+        # adds 15 empty lines to push the footer to the bottom
+        st.container(height=220,border=False)
+        # footer
+        st.caption("Made with ❤️ by Satyam Vishwakarma", text_alignment="center")
         
     # Run the selected page
     pg.run()
