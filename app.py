@@ -1,13 +1,13 @@
 import streamlit as st
 import commands  # Assuming this is your local module
 
-# 1. Initialize Session State
+# Initialize Session State
 if 'logged_in' not in st.session_state:
     st.session_state.logged_in = False
 if 'username' not in st.session_state:
     st.session_state.username = ""
 
-# 2. Define the Login Page (Local function)
+# Define the Login Page (Local function)
 def login_page():
     st.title("Login", text_alignment = "center")
     username = st.text_input("Username")
@@ -22,7 +22,7 @@ def login_page():
         else:
             st.error("Incorrect username or password")
 
-# 3. Define the Navigation Logic (The "Logged In" View)
+# Define the Navigation Logic (The "Logged In" View)
 def run_dashboard():
     # Define your pages here
     # Note: These files (main.py, view_data.py) must exist in your folder
@@ -46,7 +46,7 @@ def run_dashboard():
     # Run the selected page
     pg.run()
 
-# 4. Traffic Control
+# Traffic Control
 if st.session_state.logged_in:
     run_dashboard()
 else:

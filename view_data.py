@@ -1,1 +1,3 @@
-# here the code for viewing the data will be written
+import streamlit as st
+
+st.title("View Data", text_alignment = "center")

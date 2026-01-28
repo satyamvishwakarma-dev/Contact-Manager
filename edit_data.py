@@ -1,1 +1,3 @@
-# Here the code for Editing the data will be written
+import streamlit as st
+
+st.title("Edit Data", text_alignment = "center")
