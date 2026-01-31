@@ -8,9 +8,10 @@ st.title("View Data", text_alignment = "center")
 FILE_PATH = "contacts.csv"
 
 if os.path.exists(FILE_PATH):
-    col_ratios = [1.5, 1.5, 4, 5, 1.5]
+    col_ratios = [2, 1.5, 3, 5, 1.5]
+
     # Read the CSV
-    df = pd.read_csv(FILE_PATH)
+    df = pd.read_csv(FILE_PATH) 
     
     # Check if the dataframe is empty
     if df.empty:
@@ -50,6 +51,5 @@ if os.path.exists(FILE_PATH):
                 st.rerun()
 
             st.divider()
-
 else:
     st.info("No data found. Go to 'Add Data' to create some entries.")
