@@ -2,6 +2,12 @@ import streamlit as st
 import time
 import csv
 
+st.set_page_config(
+    page_title="Contact Manager",
+    layout="wide",                  # Options: "centered" (default) or "wide"
+    initial_sidebar_state="expanded" # Options: "auto", "expanded", "collapsed"
+)
+
 st.title("Add Data", text_alignment = "center")
 
 with st.form("contact_form", clear_on_submit=True):

@@ -2,6 +2,12 @@ import streamlit as st
 import pandas as pd
 import os
 
+st.set_page_config(
+    page_title="Contact Manager",
+    layout="wide",                  # Options: "centered" (default) or "wide"
+    initial_sidebar_state="expanded" # Options: "auto", "expanded", "collapsed"
+)
+
 st.title("View Data", text_alignment = "center")
 
 # File path

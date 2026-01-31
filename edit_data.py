@@ -3,12 +3,18 @@ import pandas as pd
 import os
 import time
 
+st.set_page_config(
+    page_title="Contact Manager",
+    layout="wide",                  # Options: "centered" (default) or "wide"
+    initial_sidebar_state="expanded" # Options: "auto", "expanded", "collapsed"
+)
+
 st.title("Edit Data", text_alignment = "center")
 
 FILE_PATH = "contacts.csv"
 
 if os.path.exists(FILE_PATH):
-    st.warning("⚠️ **Be Careful:** Changes are permanent. Download a backup below if you are unsure.", icon="⚠️")
+    st.warning("**Be Careful:** Changes are **PERMANENT**. Download a backup below if you are unsure.", icon="⚠️")
 
     st.header("Instructions:")
     st.text("1. Double click on the cell to edit the data in the table.\n2. Click the 'Save Changes' button to save the data." + 
